@@ -1,11 +1,7 @@
 #!/bin/bash
+DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+DISPLAY=":0"
+XAUTHORITY="/home/bhavuksharma2202/.Xauthority"
 
-export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
-export DISPLAY=":0"
-export XAUTHORITY=/home/bhavuksharma2202/.Xauthority
-
-
-su bhavuksharma2202 -c "notify-send \"New device connected\""
-su bhavuksharma2202 -c "aplay \"$HOME/scripts/sounds/iphone_notification.wav\""
-echo "Working : " $(date "+%I:%M:%S") > /tmp/newone.tmp
+su bhavuksharma2202 -c "DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/1000/bus\" notify-send \"Disks\" \"New Device Connected\""
 
