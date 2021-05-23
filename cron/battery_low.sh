@@ -7,10 +7,10 @@ low_battery() {
 	if [[ $STATUS = Discharging ]]; then
 		if [[ $CHARGE -le 15 && $CHARGE -ge 10 ]]; then
 			notify-send -u critical -t 10000 "Battery" "Critically low ($CHARGE)"
-			aplay /home/bhavuksharma2202/scripts/sounds/iphone_notification.wav
+			aplay /home/$USER/scripts/sounds/iphone_notification.wav
 		elif [[ $CHARGE -lt 10 ]]; then
 			notify-send -u critical -t 5000 "Battery($CHARGE)" "Suspending in 60 sec"
-			aplay /home/bhavuksharma2202/scripts/sounds/battery_low_damping.wav
+			aplay /home/$USER/scripts/sounds/battery_low_damping.wav
 			sleep 56
 			CHECK=$(cat /sys/class/power_supply/BAT0/status)
 			if [[ "$CHECK" = "Charging" ]]; then
