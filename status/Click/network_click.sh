@@ -2,7 +2,7 @@
 
 WNAME=$(iwgetid -r)
 WCHANNEL=$(iwgetid -rc)
-WFREQUENCY=$(iwgetid -rf | grep -o "[2,5][.][4,0]")
+WFREQUENCY=$(iwgetid -rf | grep -o "[2,5][.][0-9]")
 WINTR=$(iwgetid | awk '{print $1}')
 
 if [[ $(iwgetid) ]]; then
