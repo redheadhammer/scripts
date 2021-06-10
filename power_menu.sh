@@ -16,7 +16,7 @@ elif [ "$DIALOG_RESULT" = "hibernate" ];
 elif [ "$DIALOG_RESULT" = "reboot" ];
     then
         exec systemctl reboot
-elif [ "$DIALOG_RESULT" = "shutdown" ];
+elif [ "$DIALOG_RESULT" = "poweroff" ];
     then
         exec systemctl poweroff
 fi
