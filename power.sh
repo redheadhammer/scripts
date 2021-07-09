@@ -10,12 +10,12 @@ status=$(cat /sys/class/power_supply/AC0/online)
 #else
     if [[ $status -eq 0 ]]; then 
         su bhavuksharma2202 -c "DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/1000/bus\" notify-send \"Power\" \"AC Offline\""
-        /usr/bin/sudo -u bhavuksharma2202 /usr/bin/aplay /home/bhavuksharma2202/scripts/sounds/disconnected.wav > /dev/null 2>&1
+#        /usr/bin/sudo -u bhavuksharma2202 /usr/bin/aplay /home/bhavuksharma2202/scripts/sounds/disconnected.wav > /dev/null 2>&1
         rm /tmp/check
     else
         su bhavuksharma2202 -c "DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/1000/bus\" notify-send \"Power\" \"AC Online\""
-        /usr/bin/sudo -u bhavuksharma2202 /usr/bin/aplay /home/bhavuksharma2202/scripts/sounds/charging_activated.wav > /dev/null 2>&1
-        rm /tmp/check
+#        /usr/bin/sudo -u bhavuksharma2202 /usr/bin/aplay /home/bhavuksharma2202/scripts/sounds/charging_activated.wav > /dev/null 2>&1
+#        rm /tmp/check
     fi
 
 #fi
