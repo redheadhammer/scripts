@@ -1,3 +1,3 @@
 # Script files
 
-Script files for various linux fucntions
+Script files for various linux functions
