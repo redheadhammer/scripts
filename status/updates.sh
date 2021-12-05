@@ -1,5 +1,6 @@
 #!/bin/bash
 
-UPDATES=$(sudo pacman -Syup | grep -c http)
+UPDATES=$(pacman -Sup | grep -c http)
+#UPDATES=$(pacman -Qu)
 printf " $UPDATES"
 

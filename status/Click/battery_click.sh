@@ -14,5 +14,14 @@ MANFT=$(cat /sys/class/power_supply/BAT0/energy_full_design)
 
 HEALTH=$((FULL * 100 /MANFT ))
 
-notify-send "($STATUS)    Remaining: $REMT" "uptime: $(uptime |awk '{print $3}') ($COUNT cycles)\n HEALTH : $HEALTH%" --icon $HOME/scripts/status/Click/icons/uptime.png
+Device_ID=$(kdeconnect-cli --id-only -a)
+
+if [[ $Device_ID == "" ]]
+then
+    Battery="Not Connected"
+else 
+    Battery=$(gdbus call --session --dest org.kde.kdeconnect --object-path /modules/kdeconnect/devices/$Device_ID/battery --method org.freedesktop.DBus.Properties.Get org.kde.kdeconnect.device.battery charge | grep -o -e "[0-9]*")
+fi
+
+notify-send "($STATUS)" "Battery(kde):$Battery\n uptime: $(uptime |awk '{print $3}') ($COUNT cycles)\n HEALTH : $HEALTH%" --icon $HOME/scripts/status/Click/icons/uptime.png
 
