@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VID=$(fuser /dev/video0)
+#VID=$(fuser /dev/video0)
 AUD=$(fuser /dev/snd/pcmC0D0c)
 
 function test {
@@ -16,7 +16,7 @@ function test {
         fi
     }
     
-    vid
+#    vid
     aud
 
 }

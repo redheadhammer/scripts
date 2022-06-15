@@ -9,8 +9,8 @@ memory () {
 	MEM=$(free -h | grep Mem)
 	MEMUSED=$(echo $MEM | awk '{print $3}')
 	MEMTOT=$(echo $MEM |awk '{print $2}')
-	printf " $MEMUSED/$MEMTOT"
+	printf "  $MEMUSED/$MEMTOT"
 }
 
-cpu
+#cpu
 memory

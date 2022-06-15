@@ -9,8 +9,8 @@ dwm_alsa () {
     	else
 	        if [ "$VOL" -gt 0 ] && [ "$VOL" -le 33 ]; then
 	            printf " $VOL"
-	        elif [ "$VOL" -gt 33 ] && [ "$VOL" -le 66 ]; then
-	            printf " $VOL"
+	        elif [ "$VOL" -gt 33 ] && [ "$VOL" -le 55 ]; then
+	            printf " $VOL"
 	        else
 	            printf " $VOL"
 	        fi

@@ -1,5 +1,5 @@
 #!/bin/bash
-# This will script needs acpi to be installed. 
+# This script needs acpi to be installed. 
 
 STATUS=$(cat /sys/class/power_supply/BAT0/status)
 

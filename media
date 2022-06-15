@@ -1,0 +1,3 @@
+General;\nFile Name: %FileName%.%FileExtension%\r\nFile Size: %FileSize%\r\nDuration: %Duration/String3%\r\nFrame Rate: %FrameRate%\r\nModify Date: %File_Modified_Date%\r
+Video;Dimensions: %Width%x%Height%\r\nVideo BitRate: %BitRate/String%\r
+Audio;Audio BitRate: %BitRate/String%\r

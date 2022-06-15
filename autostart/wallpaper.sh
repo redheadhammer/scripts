@@ -2,6 +2,6 @@
 
 while true
 do 
-	nitrogen --set-zoom-fill --random .config/nitrogen/walls
-sleep 300 
+	nitrogen --set-zoom-fill --random .config/nitrogen/wallpapers
+sleep 200 
 done

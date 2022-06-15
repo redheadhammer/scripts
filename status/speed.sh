@@ -13,6 +13,7 @@ function human_readable {
 			echo "$VALUE${BIGGIFIERS[$CURRENT_BIGGIFIER]}"
 		}
 
+if  [[ $(iwgetid) ]]  ; then
 		###CHECKS####
 
 		DEVICE=${INTR}
@@ -49,3 +50,6 @@ function human_readable {
 		SPEED=$((($RECEIVED+$TRANSMITTED-$TOTAL)/$SLP))
 
 		echo " `human_readable $SPEED`/s"
+else 
+	printf ""
+fi
