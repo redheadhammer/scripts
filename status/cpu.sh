@@ -2,7 +2,7 @@
 
 cpu () {
 	CPU=$(top -bn1 | grep Cpu | awk '{print $2}')
-	printf " $CPU|"
+	printf " $CPU | "
 }
 
 memory () {
@@ -12,5 +12,5 @@ memory () {
 	printf "  $MEMUSED/$MEMTOT"
 }
 
-#cpu
+cpu
 memory

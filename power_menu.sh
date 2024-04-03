@@ -1,4 +1,5 @@
 #!/bin/bash
+# Rofi menu for power related options 
 
 DIALOG_RESULT=$(echo -e 'lock session\nsuspend\nreboot\npoweroff\nexit window manager' | rofi -config $HOME/.config/rofi/launcher/style.rasi -dmenu -i -p "[ Computer ] : " -hide-scrollbar -tokenize -lines 4 -eh 1 -width 40 -location 8 -xoffset 500 -yoffset 70 -padding 30 -disable-history -font "SourceCodePro 18")
 

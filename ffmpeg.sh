@@ -1,5 +1,6 @@
 #!/bin/bash
 #! This requires ffmpeg package and mediainfo package.
+# This is incomplete
 
 echo "enter file path"
 read INPUT

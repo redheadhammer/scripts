@@ -9,6 +9,7 @@ source ~/scripts/speed_wlan0.sh
 
 while true
 	do
+        # xsetroot to set top bar in dwm when not using dwmblocks
 		xsetroot -name "|$(speed_wlan0)|$(dwm_resources)|$(dwm_alsa)|$(dwm_date)|$(dwm_battery)|"
 	sleep 0.5 
 done

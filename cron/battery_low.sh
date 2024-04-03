@@ -20,7 +20,6 @@ low_battery() {
 			notify-send -t 5000 "PowerOff" 
 			sleep 5
 			suspend
-			
 		fi        
 	fi
 }

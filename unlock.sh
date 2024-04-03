@@ -1,4 +1,6 @@
 #!/bin/bash
+# I created this script because when i used to test my android apps on my device, i was too lazy to unlock my devices by reaching out to it
+
 
 adb shell input keyevent 26 # power-button
 

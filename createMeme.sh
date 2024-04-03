@@ -13,7 +13,7 @@ sizeReduce() {
     # redusing constant rate factor to reduce file size
     printf "\n######### SPECIFY A CRF(constant rate factor) VALUE #########\n"
 
-    printf "# Enter crf value(0-51, ideal value 17-26)                    #\n# NOTE: LOWER VALUE MEANS BETTER QUALITY BUT HIGH SIZE        #\n"
+    printf "# Enter crf value(0-51, ideal value 17-26) #\n# NOTE: LOWER VALUE MEANS BETTER QUALITY BUT HIGH SIZE        #\n"
 
     printf "###############################################################\n"
 
